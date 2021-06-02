@@ -7,7 +7,6 @@ on:
         required: true
 jobs:
   build:
-    if: ${{ secrets.ref == 'refs/heads/main' }}
     runs-on: ubuntu-latest
     
     strategy:
@@ -15,8 +14,7 @@ jobs:
         node-version: [12.13.0]
         
     steps:
-    - run: |
-        echo "Log level: ${{ github.event.inputs.password }}"
     - uses: actions/checkout@v1
+    - if: github.event.inputs.password == ${{ secrets.INPUTS_PASSWORD }}
     - name: my-step
       run: echo "Hello World!"
