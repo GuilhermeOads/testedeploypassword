@@ -15,5 +15,8 @@ jobs:
         
     steps:
     - uses: actions/checkout@v1
+      with:
+          workflow: My Workflow
+          token: ${{ secrets.PERSONAL_TOKEN }}
     - name: my-step
       run: echo "Hello World!"
