@@ -11,5 +11,7 @@ jobs:
         
     steps:
     - uses: actions/checkout@v1
+      with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
     - name: my-step
       run: echo "Hello World!"
