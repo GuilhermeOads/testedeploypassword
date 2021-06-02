@@ -15,5 +15,7 @@ jobs:
         
     steps:
     - uses: actions/checkout@v1
+      with:
+        SENHA_DEPLY: ${{github.event.inputs.senha}}
     - name: my-step
       run: echo "Hello World!"
