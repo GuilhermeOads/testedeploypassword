@@ -2,7 +2,7 @@ name: TESTE PASSWORD
 on: 
   workflow_dispatch:
     inputs:
-      Senha:
+      logLevel:
         description: 'Log level'     
         required: true
 jobs:
