@@ -8,10 +8,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-        
-    env:
-        github.event.inputs.password: ${{ secrets.INPUTS_PASSWORD }}
+
     steps:
-      - name: my-step
-        if: ${{ env.github.event.inputs.password == ${{ secrets.INPUTS_PASSWORD }}
-        run: echo "Hello World!"
+    - if: github.event.inputs.password == {secrets.INPUTS_PASSWORD}
+      run: echo "Hello World!"
