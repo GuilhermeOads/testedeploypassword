@@ -16,5 +16,4 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: my-step
-    - if: github.event.inputs.password == ${{ secrets.INPUTS_PASSWORD }}
       run: echo "Hello World!"
