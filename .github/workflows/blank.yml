@@ -14,8 +14,6 @@ jobs:
         node-version: [12.13.0]
         
     steps:
-    - run: |
-        echo "Senha: ${{ github.event.inputs.logLevel }}"
     - uses: actions/checkout@v1
     - name: my-step
       run: echo "Hello World!"
