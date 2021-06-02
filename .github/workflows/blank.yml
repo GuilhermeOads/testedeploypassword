@@ -11,6 +11,4 @@ jobs:
         
     steps:
     - if: github.event.inputs.password == '123'
-      uses: actions/checkout@v1
-    - name: my-step
       run: echo "Hello World!"
