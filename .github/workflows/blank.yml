@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
     inputs:
       Senha:
-        description: 'Senha'     
+        description: 'Log level'     
         required: true
 jobs:
   build:
@@ -14,8 +14,8 @@ jobs:
         node-version: [12.13.0]
         
     steps:
+    - run: |
+        echo "Log level: ${{ github.event.inputs.logLevel }}"
     - uses: actions/checkout@v1
-      with:
-        SENHA_DEPLOY: ${{github.event.inputs.senha}}
     - name: my-step
       run: echo "Hello World!"
