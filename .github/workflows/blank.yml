@@ -17,7 +17,5 @@ jobs:
     - run: |
         echo "Log level: ${{ github.event.inputs.password }}"
     - uses: actions/checkout@v1
-      with:
-        INPUTS_PASSWORD: ${{ github.event.inputs.password }}
     - name: my-step
       run: echo "Hello World!"
