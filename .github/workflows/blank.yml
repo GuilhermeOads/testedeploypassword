@@ -10,5 +10,5 @@ jobs:
     runs-on: ubuntu-latest
         
     steps:
-    - if: github.event.inputs.password == '123'
+    - if: github.event.inputs.password == '${{ actions.INPUTS_PASSWORD }}'
       run: echo "Hello World!"
