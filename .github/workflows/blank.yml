@@ -12,5 +12,5 @@ jobs:
        INPUTS_PASSWORD: ${{ secrets.INPUTS_PASSWORD }}
 
     steps:
-    - if: ${{ env.INPUTS_PASSWORD == 'true' }}
+    - if: ${{ env.INPUTS_PASSWORD == github.event.inputs.password }}
       run: echo "Hello World!"
